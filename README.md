@@ -1,134 +1,140 @@
-# Checkcar - Sistema de Vistoria Veicular
+# Checkcar — Sistema de Vistoria Veicular · Vehicle Inspection System
 
-## 📋 Sobre o Projeto
+## 🇧🇷 Sobre o Projeto
 
-O Checkcar é uma plataforma web especializada em vistorias veiculares, oferecendo serviços profissionais e confiáveis para diversos tipos de veículos. O sistema foi desenvolvido com foco em usabilidade, performance e segurança.
+**Checkcar** é um site institucional estático para uma empresa de vistorias veiculares. Ele apresenta os serviços oferecidos de forma clara, responsiva e otimizada para SEO, com foco em leveza, compatibilidade com dispositivos móveis e performance ideal para web.
 
-## 🚀 Funcionalidades
+## 🇺🇸 About the Project
 
-- **Vistorias Especializadas** para diferentes tipos de veículos:
-  - Carros
-  - Motos
-  - Caminhões
-  - Barcos
+**Checkcar** is a static institutional website for a vehicle inspection company. It showcases the services provided in a clear, responsive and SEO-optimized manner, focusing on performance, mobile compatibility, and a lightweight footprint.
 
-- **Serviços Disponíveis**:
-  - Vistoria Cautelar
-  - Vistoria para Transferência
-  - Segunda Via de Documentos
+---
 
-- **Interface Responsiva**:
-  - Design adaptável para desktop e dispositivos móveis
-  - Navegação intuitiva
-  - Botões de ação claros e visíveis
+## 🚀 Funcionalidades · Features
 
-## 🛠️ Tecnologias Utilizadas
+- **Tipos de veículos / Vehicle types**:
+    - Carros · Cars
+    - Motos · Motorcycles
+    - Caminhões · Trucks
+    - Embarcações · Boats
+
+- **Serviços oferecidos / Services offered**:
+    - Vistoria Cautelar · Pre-purchase inspection
+    - Vistoria para Transferência · Ownership transfer inspection
+    - Segunda Via de Documentos · Duplicate document issuance
+
+- **Interface**:
+    - Mobile-first design
+    - Páginas estáticas com carregamento rápido · Fast-loading static pages
+    - Botão flutuante para WhatsApp · WhatsApp floating button
+
+---
+
+## 🛠️ Tecnologias Utilizadas · Stack
 
 - **Frontend**:
-  - HTML5
-  - CSS3 (com variáveis CSS e media queries)
-  - JavaScript
-  - WebP para otimização de imagens
+    - HTML5
+    - CSS3 (com media queries e variáveis)
+    - JavaScript vanilla
+    - Imagens `.webp` otimizadas
 
-- **Design**:
-  - Sistema de cores personalizado
-  - Animações suaves
-  - Layout responsivo
-  - Ícones otimizados
+- **Deploy**:
+    - GitHub Pages
+    - GitHub Actions (CI/CD)
+    - Cloudflare DNS + HTTPS
+
+---
 
 ## 🎨 Design System
 
-### Cores Principais
-- **Primária**: `#060434` (Azul escuro)
-- **Secundária**: `#cc0000` (Vermelho)
-- **Texto**: `#333333`
-- **Cinza Claro**: `#f5f5f5`
-- **Cinza Médio**: `#e0e0e0`
-- **Cinza Escuro**: `#666666`
-- **Branco**: `#ffffff`
+- **Cores · Colors**:
+    - Azul escuro · Navy: `#060434`
+    - Vermelho · Red: `#cc0000`
+    - Branco · White: `#ffffff`
+    - Cinzas · Grays: `#f5f5f5`, `#e0e0e0`, `#666666`
+    - Texto · Text: `#333333`
 
-### Tipografia
-- **Fonte Principal**: Inter, com fallback para -apple-system
-- **Tamanhos de Fonte**:
-  - Títulos: 2.5rem
-  - Subtítulos: 1.1rem
-  - Texto: 1rem
-  - Botões: 0.95rem - 1.05rem
+- **Fonte · Font**:
+    - `Inter`, fallback: `-apple-system`
 
-### Componentes
-- **Botões**:
-  - Primário: Fundo azul escuro com texto branco
-  - Secundário: Borda azul escuro com texto azul
-  - WhatsApp: Verde com ícone
-  - CTA: Destaque especial com sombra
+- **Componentes · Components**:
+    - Botões · Buttons: primário, secundário, WhatsApp, CTA
+    - Cards com bordas arredondadas e hover suave · Rounded shadow cards with smooth hover
 
-- **Cards**:
-  - Sombras suaves
-  - Efeitos hover
-  - Bordas arredondadas
-  - Transições animadas
+---
 
-## 📱 Responsividade
+## 📱 Responsividade · Responsiveness
 
-O site é totalmente responsivo, com breakpoints específicos:
-- Mobile: até 768px
-- Tablet: 769px - 1024px
-- Desktop: acima de 1024px
+| Dispositivo · Device | Largura · Width        |
+|----------------------|------------------------|
+| Mobile               | até 768px              |
+| Tablet               | 769px a 1024px         |
+| Desktop              | acima de 1024px        |
 
-## 🚀 Como Executar
+---
 
-1. Clone o repositório
-2. Abra o arquivo `index.html` em seu navegador
-3. Para desenvolvimento, utilize um servidor local
-
-## 📁 Estrutura de Arquivos
+## 📁 Estrutura · File Structure
 
 ```
 checkcar/
 ├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── main.js
+│   ├── css/styles.css
+│   ├── js/main.js
 │   └── img/
-│       ├── logo.webp
-│       ├── carro.webp
-│       ├── moto.webp
-│       ├── caminhao.webp
-│       ├── barco.webp
-│       ├── transferencia.webp
-│       ├── cautelar.webp
-│       ├── segunda-via.webp
-│       └── whatsapp-icon.webp
-└── index.html
+│       ├── *.webp / *.svg
+│       └── favicon.ico
+├── index.html
+├── agendamento.html
+├── servicos.html
+├── sobre.html
+├── CNAME
+└── .github/workflows/deploy.yml
 ```
 
-## 🔍 Otimizações
+---
 
-- **Performance**:
-  - Imagens em formato WebP
-  - CSS otimizado com variáveis
-  - JavaScript modular
-  - Carregamento assíncrono de recursos
+## ⚙️ Deploy Automatizado · Auto Deployment
 
-- **SEO**:
-  - Estrutura semântica HTML
-  - Meta tags otimizadas
-  - Títulos hierárquicos
+- Branch: `main`
+- GitHub Actions publica para GitHub Pages após cada push
+- Domínio personalizado via Cloudflare
+- HTTPS automático após propagação DNS
 
-## 🤝 Contribuição
+---
 
-Contribuições são bem-vindas! Para contribuir:
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+## 🔍 Otimizações · Optimization
 
-## 📄 Licença
+- Imagens em `.webp`
+- Sem dependências externas
+- Meta tags completas e semântica HTML5
+- Hierarquia de títulos clara (`<h1>` > `<h2>` > ...)
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+---
 
-## 📞 Contato
+## 🤝 Contribuindo · Contributing
 
-Para mais informações ou suporte, entre em contato através do WhatsApp disponível no site. 
+```bash
+git clone https://github.com/seuusuario/checkcar.git
+git checkout -b feature/NomeDaFeature
+git commit -m "feat: nova feature"
+git push origin feature/NomeDaFeature
+# Abra um Pull Request · Open a Pull Request
+```
+
+---
+
+## 📄 Licença · License
+
+Distribuído sob a licença MIT.  
+Distributed under the MIT License.  
+See `LICENSE` for details.
+
+---
+
+## 📞 Contato · Contact
+
+Dúvidas, sugestões ou agendamentos?  
+Have questions, suggestions or want to schedule a visit?
+
+👉 Fale conosco via WhatsApp – botão disponível no site.  
+👉 Contact us via WhatsApp – the button is available on the website.

@@ -2,25 +2,31 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]  # Executa o workflow sempre que houver push na branch main
 
 permissions:
-  contents: write
+  contents: write  # Permite que o GitHub Actions escreva no repositório (necessário para o deploy)
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Define o ambiente de execução como Ubuntu
 
     steps:
-      - name: Checkout source code
+      - name: Checkout do código-fonte
         uses: actions/checkout@v4
+        # Este passo faz o checkout do código do repositório para que os próximos passos
+        # possam acessar os arquivos necessários para o deploy
 
-      - name: Disable Jekyll
+      - name: Desabilitar Jekyll
         run: echo > .nojekyll
+        # O GitHub Pages usa Jekyll por padrão. Criar um arquivo `.nojekyll` desativa o Jekyll,
+        # o que é necessário caso o site tenha pastas ou arquivos que o Jekyll ignoraria (como 'assets/')
 
-      - name: Deploy to GitHub Pages
+      - name: Fazer deploy para o GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           cname: checkcarbauru.com.br
+        # Este passo publica os arquivos do site no GitHub Pages utilizando a action do peaceiris.
+        # A opção 'publish_dir' define o diretório a ser publicado e 'cname' configura o domínio personalizado.

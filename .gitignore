@@ -1,0 +1,10 @@
+/vendor
+/node_modules
+.env
+.DS_Store
+.idea
+/storage/*.key
+/storage/app/public
+/public/storage
+.phpunit.result.cache
+composer.lock

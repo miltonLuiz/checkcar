@@ -165,4 +165,63 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// Atualiza o ano do copyright automaticamente
+document.addEventListener('DOMContentLoaded', function() {
+    const copyrightElement = document.querySelector('.footer-bottom p');
+    if (copyrightElement) {
+        const currentYear = new Date().getFullYear();
+        copyrightElement.innerHTML = copyrightElement.innerHTML.replace('2025', currentYear);
+    }
+});
+
+// Garante que os botões "Saiba Mais" funcionem corretamente
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona todos os botões "Saiba Mais"
+    const saibaMaisButtons = document.querySelectorAll('.service-card .service-content .btn-secondary');
+    
+    // Adiciona evento de clique a cada botão
+    saibaMaisButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Previne o comportamento padrão apenas se necessário
+            // e.preventDefault();
+            
+            // Redireciona para o URL no atributo href
+            const url = this.getAttribute('href');
+            if (url) {
+                window.location.href = url;
+            }
+        });
+        
+        // Adiciona estilo de cursor pointer explicitamente
+        button.style.cursor = 'pointer';
+    });
+});
+
+// Melhora o comportamento de scroll para as âncoras de serviços
+document.addEventListener('DOMContentLoaded', function() {
+    // Verifica se estamos na página de serviços
+    if (window.location.pathname.includes('servicos.html')) {
+        // Verifica se há uma âncora na URL
+        if (window.location.hash) {
+            const targetId = window.location.hash.substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Adiciona um pequeno atraso para garantir que a página esteja completamente carregada
+                setTimeout(function() {
+                    // Rola até o elemento com offset para compensar o cabeçalho fixo
+                    const headerHeight = 80; // Altura aproximada do cabeçalho fixo
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerHeight;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }, 100);
+            }
+        }
+    }
 }); 

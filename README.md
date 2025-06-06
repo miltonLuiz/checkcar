@@ -21,7 +21,7 @@
 - **Serviços oferecidos / Services offered**:
     - Vistoria Cautelar · Pre-purchase inspection
     - Vistoria para Transferência · Ownership transfer inspection
-    - Segunda Via de Documentos · Duplicate document issuance
+    - Vistoria de Transferência · Ownership transfer inspection
 
 - **Interface**:
     - Mobile-first design
